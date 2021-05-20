@@ -8,16 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'couverture-appli',
     pathMatch: 'full'
   },
   {
     path: 'create-compte',
     loadChildren: () => import('./libs/views/pages/create-compte/create-compte.module').then(m => m.CreateComptePageModule)
-  },
-  {
-    path: 'views',
-    loadChildren: () => import('./libs/views/pages/couvertureAppli/libs/views/views.module').then(m => m.ViewsPageModule)
   },
   {
     path: 'couverture-appli',
