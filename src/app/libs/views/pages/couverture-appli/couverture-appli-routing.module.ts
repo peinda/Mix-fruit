@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ViewsPage } from './views.page';
+import { CouvertureAppliPage } from './couverture-appli.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ViewsPage
+    component: CouvertureAppliPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ViewsPageRoutingModule {}
+export class CouvertureAppliPageRoutingModule {}

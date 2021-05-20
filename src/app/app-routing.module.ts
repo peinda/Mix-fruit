@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'views',
     loadChildren: () => import('./libs/views/pages/couvertureAppli/libs/views/views.module').then(m => m.ViewsPageModule)
   },
+  {
+    path: 'couverture-appli',
+    loadChildren: () => import('./libs/views/pages/couverture-appli/couverture-appli.module').then(m => m.CouvertureAppliPageModule)
+  },
 ];
 
 @NgModule({
