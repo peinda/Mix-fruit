@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'couverture-appli',
+    redirectTo: 'profil',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'couverture-appli',
     loadChildren: () => import('./libs/views/pages/couverture-appli/couverture-appli.module').then(m => m.CouvertureAppliPageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./libs/views/pages/profil/profil.module').then( m => m.ProfilPageModule)
   },
 ];
 
