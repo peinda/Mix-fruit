@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-card-content class="header">
       <ion-card-title class="title">Mix Fruit
@@ -6,10 +6,19 @@
       <img src="./.././../../../../assets/icon/Capture.PNG" alt="">
     </ion-card-content>
   </ion-toolbar>
-</ion-header>
+</ion-header>-->
 <ion-content padding>
-  <form action="">
-    <ion-list>
+
+    <ion-list style="text-align: center"><ion-card>
+      <ion-card-header>
+        <ion-card-title>Mix Fruit</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../../../../assets/icon/Capture.PNG" alt="logo" srcset="">
+      </ion-card-content>
+    </ion-card>
+
+
       <ion-item lines="none">
         <ion-label position="stacked">Prenom</ion-label>
         <ion-input type="text" name="prenom"></ion-input>
@@ -26,8 +35,9 @@
         <ion-label position="stacked">Adresse de livraison</ion-label>
         <ion-input type="text" name="adresse"></ion-input>
       </ion-item>
+      <ion-button type="submit"> Créer un compte </ion-button>
+      <br>
+      <a href="#">Se Connecter</a><br><br><br>
+
     </ion-list>
-    <ion-button type="submit" color="#64BA02" class="btn btn-success"> Créer un compte </ion-button>
-  </form>
-  <a href="#">Se Connecter</a>
 </ion-content>
