@@ -6,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ItemListProduitModule } from './libs/views/components/item-list-produit/item-list-produit.module';
 
 @NgModule({
   declarations: [AppComponent],
