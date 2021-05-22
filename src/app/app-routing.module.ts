@@ -3,12 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./libs/views/pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'couverture-appli',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
@@ -18,6 +14,10 @@ const routes: Routes = [
   {
     path: 'couverture-appli',
     loadChildren: () => import('./libs/views/pages/couverture-appli/couverture-appli.module').then(m => m.CouvertureAppliPageModule)
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./libs/views/main/main.module').then( m => m.MainPageModule)
   },
 ];
 
