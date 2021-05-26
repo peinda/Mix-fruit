@@ -1,9 +1,84 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Panier</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <ion-card-content>
+    <ion-text>
+      <h2>Liste des commandes</h2>
+    </ion-text>
+    <img src="../../../../../assets/icon/images.jpg" srcset="">
+    </ion-card-content>
+  <ion-grid>
+  <ion-row>
+    <ion-col size="3">
+    <ion-text>Pot</ion-text>
+    </ion-col>
+    <ion-col size="3">
+      <ion-text>Quantité</ion-text>
+    </ion-col>
+    <ion-col size="3">
+      <ion-text>Prix unitaire</ion-text>
+    </ion-col>
+    <ion-col size="3">
+      <ion-text>Total</ion-text>
+    </ion-col>
+  </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-text>Petit format</ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-col size="4"></ion-col>
+        <ion-col size="4"><ion-text>2</ion-text></ion-col>
+        <ion-col size="4"></ion-col>
+      </ion-col>
+      <ion-col size="3">
+        <ion-text>500</ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-text>1000</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-text>Grand format</ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-col size="4"></ion-col>
+        <ion-col size="4"><ion-text>3</ion-text></ion-col>
+        <ion-col size="4"></ion-col>
+      </ion-col>
+      <ion-col size="3">
+        <ion-text>1000</ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-text>3000</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="prixtotal">
+      <ion-col size="4">
+        <ion-text style="font-size: 12px">Prix total</ion-text>
+      </ion-col>
+      <ion-col size="4">
+      </ion-col>
+      <ion-col size="4">
+        <ion-text style="font-size: 12px">4000 FcFa</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-text class="font">Adresse de livraison</ion-text>
+      </ion-col>
+      <ion-col size="6">
+      <ion-input readonly>Immeuble NSIA VDN</ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button class="button1"><ion-icon name= "wallet-outline"> </ion-icon>J'achète</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="button2"><ion-icon name="close-outline"></ion-icon>Annuler</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
