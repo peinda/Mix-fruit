@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'verification-code',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
-    path: '',
+    path: 'create-compte',
     loadChildren: () => import('./libs/views/pages/create-compte/create-compte.module').then(m => m.CreateComptePageModule)
   },
   {
