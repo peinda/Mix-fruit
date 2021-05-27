@@ -6,7 +6,7 @@ ion-card-content{
   }
 }
 ion-text{
-  font-size: 9px;
+  font-size: 0.6em;
 }
 .prixtotal{
   font-weight: bold;
@@ -16,14 +16,18 @@ ion-text{
   font-size: 10px;
 }
 ion-input{
-  font-size: 7.5px;
+  font-size: 0.7em;
   border-radius: 10px;
   border: 2px solid #64BA02;
-  --padding-start: 30px;
+  --padding-start: 15px;
   color: rgb(70, 69, 69);
+}
+ion-button{
+  --background-hover:none;
 }
 .button1{
   --background:#64BA02;
+  
 
 }
 .button2{
@@ -31,5 +35,32 @@ ion-input{
 }
 .ad{
   color: black;
+}
+.btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+.btn{
+  width: 16px;
+  height: 20px;
+  position: relative;
+  bottom: 3px;
+  ion-button{
+    width: 16px;
+    height: 20px;
+    --border-color: #64BA02;
+    --border-radius: 5px;
+    color: black;
+  }
+  ion-text{
+    position: relative;
+    left: 11px;
+    top: 3px;
+  }
+}
+// .txt{
+//   po
+//   left: 5px;
+// }
 }
 
