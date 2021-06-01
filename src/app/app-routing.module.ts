@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'connection',
     loadChildren: () => import('./libs/views/pages/connection/connection.module').then( m => m.ConnectionPageModule)
   },
+  {
+    path: 'verification-tel',
+    loadChildren: () => import('./libs/views/pages/verification-tel/verification-tel.module').then(m => m.VerificationTelPageModule)
+  },
 ];
 
 @NgModule({

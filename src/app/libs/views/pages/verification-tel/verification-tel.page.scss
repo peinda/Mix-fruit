@@ -1,0 +1,20 @@
+ion-content{
+  background: #FFFFFF;
+  height: 70%;
+  ion-card{
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: none;
+    margin-bottom: 0px;
+    ion-card-title{
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    ion-card-content{
+      img{
+        height: 130px;
+        width: 100px;
+      }
+    }
+  }
+}
