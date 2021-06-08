@@ -18,3 +18,35 @@ ion-content{
     }
   }
 }
+
+ion-list{
+  ion-item {
+    --ion-ietm-background: transparent;
+    --border-width: 0px;
+    --inner-border-width: 0px;
+    padding-bottom: 10px;
+    --highlight-color-focused:none;
+    ion-label{
+      font-weight: bold;
+      color: rgb(155, 155, 155);
+      margin-bottom: 20px;
+    }
+    ion-input{
+      border-radius: 15px;
+      border: 2px solid #64BA02;
+      --padding-start: 30px;
+      color: rgb(70, 69, 69);
+    }
+  }
+  ion-button{
+    height: 50px;
+    width: 150px;
+    font-size: 14px;
+    text-transform: none;
+    --background:#64BA02;
+    font-weight: 400;
+    --border-radius: 30px !important;
+    color:#FFFFFF;
+    margin-bottom: 30px;
+  }
+  }
