@@ -8,21 +8,25 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'create-compte',
-    loadChildren: () => import('./libs/views/pages/create-compte/create-compte.module').then(m => m.CreateComptePageModule)
-  },
-  {
     path: 'couverture-appli',
     loadChildren: () => import('./libs/views/pages/couverture-appli/couverture-appli.module').then(m => m.CouvertureAppliPageModule)
   },
   {
-    path: 'main',
-    loadChildren: () => import('./libs/views/main/main.module').then( m => m.MainPageModule)
+    path: 'verification-tel',
+    loadChildren: () => import('./libs/views/pages/verification-tel/verification-tel.module').then(m => m.VerificationTelPageModule)
+  },
+  {
+    path: 'create-compte',
+    loadChildren: () => import('./libs/views/pages/create-compte/create-compte.module').then(m => m.CreateComptePageModule)
   },
   {
     path: 'verification-code',
     loadChildren: () => import('./libs/views/pages/verification-code/verification-code.module').then(m => m.VerificationCodePageModule)
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./libs/views/main/main.module').then(m => m.MainPageModule)
+  }
 ];
 
 @NgModule({
