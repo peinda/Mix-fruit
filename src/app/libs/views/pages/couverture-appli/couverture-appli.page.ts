@@ -12,9 +12,8 @@ export class CouvertureAppliPage implements OnInit {
 
   constructor(private loading: LoadingController, private router: Router, private authService: AuthService) { }
 
-  ngOnInit() {
-    console.log(this.authService.getClientData());
-    if (this.authService.getClientData() !== undefined) {
+  async ngOnInit() {
+    if (this.authService.getClientData()) {
       this.loading.create({
       })
         .then(loading => {

@@ -15,6 +15,6 @@ import { CouvertureAppliPage } from './couverture-appli.page';
     IonicModule,
     CouvertureAppliPageRoutingModule
   ],
-  declarations: [CouvertureAppliPage]
+  declarations: [CouvertureAppliPage],
 })
 export class CouvertureAppliPageModule {}

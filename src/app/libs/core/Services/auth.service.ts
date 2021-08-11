@@ -7,6 +7,7 @@ import { StorageService } from './storage.service';
 export class AuthService {
   constructor(private storage: StorageService) { }
 
+
   public saveClientData(data: any) {
     this.storage.set("user", data);
   }
@@ -14,5 +15,4 @@ export class AuthService {
   public getClientData(): any {
     return this.storage.get("user");
   }
-  
 }
