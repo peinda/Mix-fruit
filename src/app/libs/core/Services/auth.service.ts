@@ -9,10 +9,10 @@ export class AuthService {
 
 
   public saveClientData(data: any) {
-    this.storage.set("user", data);
+    this.storage.set('user', data);
   }
 
   public getClientData(): any {
-    return this.storage.get("user");
+    return this.storage.get('user');
   }
 }

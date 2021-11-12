@@ -5,29 +5,25 @@ import { Storage } from '@ionic/storage-angular';
   providedIn: 'root'
 })
 export class StorageService {
-  private _storage: Storage | null = null;
+ // private storage: Storage | null = null;
 
+  // @ts-ignore
   constructor(private storage: Storage) {
     // this.init();
   }
 
   async init(): Promise<Storage> {
-    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
-    // await this.storage.defineDriver(IonicSecureStorageDriver);
-    const storage = await this.storage.create();
-    // this._storage = storage;
-    // console.log('inittttttttttttttttttt');
-    // console.log(this._storage);
+     const storage = await this.storage.create();
     return await storage;
   }
 
   public async set(key: string, value: any) {
-    this._storage = await this.init();
-    this._storage.set(key, value);
+    this.storage = await this.init();
+    this.storage.set(key, value);
   }
 
   public async get(key: string): Promise<any> {
-    this._storage = await this.init();
-    return await this._storage.get(key);
+    this.storage = await this.init();
+    return await this.storage.get(key);
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/libs/core/Services/auth.service';
+import {StorageService} from '../../../core/Services/storage.service';
 
 @Component({
   selector: 'app-couverture-appli',
@@ -10,29 +11,16 @@ import { AuthService } from 'src/app/libs/core/Services/auth.service';
 })
 export class CouvertureAppliPage implements OnInit {
 
-  constructor(private loading: LoadingController, private router: Router, private authService: AuthService) { }
+  constructor(private loading: LoadingController, private router: Router, private storageService: StorageService) { }
 
-  async ngOnInit() {
-    if (this.authService.getClientData()) {
-      this.loading.create({
-      })
-        .then(loading => {
-          loading.present();
-          setTimeout(() => {
-            loading.dismiss();
-            this.router.navigate(['/main']);
-          }, 2000);
-        });
-    } else {
-      this.loading.create({
-      })
-        .then(loading => {
-          loading.present();
-          setTimeout(() => {
-            loading.dismiss();
-            this.router.navigate(['/verification-tel']);
-          }, 2000);
-        });
-    }
+  ngOnInit() {
+    this.storageService.get('user').then((value => {
+      //console.log(value);
+      if (value){
+        this.router.navigate(['/main']);
+      }else {
+        this.router.navigate(['/verification-tel']);
+      }
+    }));
   }
 }

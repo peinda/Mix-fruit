@@ -1,5 +1,6 @@
-<ion-content padding>
 
+<ion-content padding>
+  <form [formGroup]="veritelForm" (ngSubmit)="onSubmit()">
   <ion-list style="text-align: center">
     <ion-card>
       <ion-card-header>
@@ -9,12 +10,22 @@
         <img src="../../../../../assets/icon/Capture.PNG" alt="logo" srcset="">
       </ion-card-content>
     </ion-card>
-
     <ion-item lines="none">
       <ion-label position="stacked">Telephone</ion-label>
-      <ion-input type="text" name="telephone"></ion-input>
+      <ion-input type="text" name="telephone" formControlName="telephone" ></ion-input>
     </ion-item>
+
+    <span class="error ion-padding" *ngIf="submitted && errorControl.telephone.errors?.required">
+      Veuillez saisir le numero de téléphone.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorControl.telephone.errors?.pattern">
+      Numero incorrect.
+    </span>
+
     <br>
     <ion-button type="submit"> Valider </ion-button>
+    <br>
+     <ion-button type="submit" routerLink="/create-compte">Créer un compte</ion-button>
   </ion-list>
+  </form>
 </ion-content>

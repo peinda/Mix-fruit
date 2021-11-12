@@ -10,26 +10,51 @@
         <img src="../../../../../assets/icon/Capture.PNG" alt="logo" srcset="">
       </ion-card-content>
     </ion-card>
-
-
+      <form action=""[formGroup]="creatComptForm" (ngSubmit)="onSubmit()">
       <ion-item lines="none">
         <ion-label position="stacked">Prenom</ion-label>
-        <ion-input type="text" name="prenom"></ion-input>
+        <ion-input type="text" name="prenom" formControlName="prenom"></ion-input>
       </ion-item>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.prenom.errors?.required">
+      Veuillez saisir ce champ.
+    </span>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.prenom.errors?.pattern">
+      Prenom incorrect.
+    </span>
       <ion-item lines="none">
         <ion-label position="stacked">Nom</ion-label>
-        <ion-input type="text" name="nom"></ion-input>
+        <ion-input type="text" name="nom" formControlName="nom"></ion-input>
       </ion-item>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.nom.errors?.required">
+      Veuillez saisir ce champ.
+    </span>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.nom.errors?.pattern">
+      Nom incorrect.
+    </span>
       <ion-item lines="none">
         <ion-label position="stacked">Telephone</ion-label>
-        <ion-input type="text" name="telephone"></ion-input>
+        <ion-input type="text" name="telephone" formControlName="telephone"></ion-input>
       </ion-item>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.telephone.errors?.required">
+      Veuillez saisir ce champ.
+    </span>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.telephone.errors?.pattern">
+      Numero incorrect.
+    </span>
       <ion-item lines="none">
         <ion-label position="stacked">Adresse de livraison</ion-label>
-        <ion-input type="text" name="adresse"></ion-input>
+        <ion-input type="text" name="adresse" formControlName="adresse"></ion-input>
       </ion-item>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.adresse.errors?.required">
+      Veuillez saisir ce champ.
+    </span>
+      <span class="error ion-padding" *ngIf="submitted && errorControl.adresse.errors?.pattern">
+      adresse incorrect.
+    </span>
       <ion-button type="submit"> Créer un compte </ion-button>
       <br>
-      <a href="#">Se Connecter</a><br><br><br>
+      <ion-button type="submit" routerLink="/verification-tel">Se Connecter</ion-button>
+      </form>
     </ion-list>
+
 </ion-content>
