@@ -14,7 +14,7 @@ import {InterceptorInterceptor} from './interceptor.interceptor';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ItemListProduitModule, IonicStorageModule.forRoot()],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ItemListProduitModule, HttpClientModule, IonicStorageModule.forRoot()],
   // eslint-disable-next-line max-len
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

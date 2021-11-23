@@ -17,7 +17,7 @@ export class VerificationTelPage implements OnInit {
 
   ngOnInit() {
     this.veritelForm= this.formBuilder.group({
-        telephone: ['', [Validators.required, Validators.pattern('7[7|6|8|0|5][0-9]{7}$')]],
+        username: ['', [Validators.required, Validators.pattern('7[7|6|8|0|5][0-9]{7}$')]],
     }
     );
   }
