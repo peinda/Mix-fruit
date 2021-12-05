@@ -1,7 +1,7 @@
 
 <ion-content padding>
   <ion-list style="text-align: center">
-    <form [formGroup]="veritelForm" (ngSubmit)="onSubmit()">
+
     <ion-card>
       <ion-card-header>
         <ion-card-title>Mix Fruit</ion-card-title>
@@ -10,6 +10,7 @@
         <img src="../../../../../assets/icon/Capture.PNG" alt="logo" srcset="">
       </ion-card-content>
     </ion-card>
+    <form [formGroup]="veritelForm" (ngSubmit)="onSubmit()">
     <ion-item lines="none">
       <ion-label position="stacked">Telephone</ion-label>
       <ion-input type="text" name="username" formControlName="username" ></ion-input>
@@ -22,10 +23,9 @@
       Numero incorrect.
     </span>
     <br>
-    <ion-button type="submit"> Valider </ion-button>
+    <ion-button type="submit" style="--background:#64BA02;"> Valider </ion-button>
     <br>
     </form>
-     <ion-button type="submit" routerLink="/create-compte">Créer un compte</ion-button>
+     <ion-button type="submit" routerLink="/create-compte" style="--background:#64BA02;">Créer un compte</ion-button>
   </ion-list>
-
 </ion-content>
