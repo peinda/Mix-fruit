@@ -7,25 +7,63 @@
       <ion-card-title>Contact info</ion-card-title>
       <ion-card-subtitle>77 455 87 57 </ion-card-subtitle>
     </ion-card>
-
-
     <div class="produits">
       <h5>Nos pots de fruit</h5>
     </div>
-  </div>
-  <ion-item style="background: red">
-    <button ion-button block>
-      <ion-card-content>
-        <img src="../../../../../assets/icon/1000.jpeg" alt="logo" srcset="">
-      </ion-card-content>
-    </button>
-  </ion-item>
-  <ion-item>
-    <button ion-button block>
-      <ion-card-content>
-        <img src="../../../../../assets/icon/500.jpeg" alt="logo" srcset="">
-      </ion-card-content>
-    </button>
-  </ion-item>
+    <ion-grid class="container">
+    <ion-row class="pot500">
+      <ion-col size="8">
+        <ion-card>
+        <ion-card-header>
+          <ion-title>Petit format <br> 500 Fcfa</ion-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>Contenu:</ion-label>
+          <ul class="fa-ul">
+            <li> <i class="fa-li"></i>Melon</li>
+            <li> <i class="fa-li"></i>Poire</li>
+            <li> <i class="fa-li"></i>Raisin</li>
+            <li> <i class="fa-li"></i>Ananas</li>
+            <li><i class="fa-li"></i>Papaye</li>
+            <li> <i class="fa-li"></i>Pastéque</li>
+            <li><i class="fa-li"></i>Melon</li>
+          </ul>
+        </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <div class="img">
+          <img src="../../../../../assets/icon/500.jpeg" alt="logo" srcset=""></div>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
 
+    <ion-grid class="container">
+      <ion-row class="pot1000">
+        <ion-col size="8">
+          <div>
+            <ion-title>Petit format <br> 1000 Fcfa</ion-title>
+          </div>
+          <div class="contenu">
+            <ion-label>Contenu:</ion-label>
+          </div>
+          <div>
+          <ul class="fa-ul">
+          <li><i class="fa-li"></i>Melon</li>
+          <li><i class="fa-li"></i>Poire</li>
+          <li> <i class="fa-li"></i>Raisin</li>
+          <li> <i class="fa-li"></i>Ananas</li>
+          <li><i class="fa-li"></i>Papaye</li>
+          <li> <i class="fa-li"></i>Pastéque</li>
+          <li><i class="fa-li"></i>Melon</li>
+        </ul>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="img">
+            <img src="../../../../../assets/icon/1000.jpeg" alt="logo" srcset=""></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

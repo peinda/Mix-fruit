@@ -11,7 +11,7 @@
           <img src="../../../../../assets/icon/Capture.PNG" alt="logo" srcset="">
         </ion-card-content>
       </ion-card>
-
+      <form action="" [formGroup]="profilForm" (ngSubmit)="onSubmit()">
       <ion-list style="text-align:center">
         <ion-item>
           <div>
@@ -33,17 +33,16 @@
             <ion-input></ion-input>
           </div>
         </ion-item>
-
         <ion-item>
           <div>
             <ion-label>Adresse de livraison</ion-label>
             <ion-input></ion-input>
           </div>
         </ion-item>
-
         <ion-button>Modifier</ion-button>
-
       </ion-list>
+      </form>
     </div>
   </div>
 </ion-content>
+

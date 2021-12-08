@@ -15,6 +15,8 @@ export class AuthService {
   public baseUrl = environment.baseUrl;
   public userUrl = '/users';
   public authentifUrl ='/login';
+  public getuserUrl = '/users/${id}';
+
   constructor(private storage: Storage, private http: HttpClient, private router: Router) { }
   // eslint-disable-next-line @typescript-eslint/member-ordering
   httpOption = {
@@ -29,6 +31,10 @@ export class AuthService {
   }
   authentif(data: any){
     return this.http.post<any>(this.baseUrl + this.authentifUrl, data, this.httpOption);
+  }
+  getUser(id: number){
+    // @ts-ignore
+    return this.http.get<any>(this.baseUrl + this.getuserUrl, data, this.httpOption);
   }
   getTokenOnIonicStorage(){
     return this.storage.get('token').then(

@@ -5,7 +5,8 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {AuthService} from '../../../core/Services/auth.service';
 import {Storage} from '@ionic/storage';
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
+import {AlertController} from "@ionic/angular";
 
 @Component({
   selector: 'app-verification-tel',
@@ -16,7 +17,7 @@ export class VerificationTelPage implements OnInit {
   veritelForm: FormGroup;
   submitted = false;
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private authSrv: AuthService, private storage: Storage) { }
+  constructor(private router: Router, private formBuilder: FormBuilder, private authSrv: AuthService, private storage: Storage, private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.veritelForm= this.formBuilder.group({
@@ -27,6 +28,7 @@ export class VerificationTelPage implements OnInit {
   }
   get errorControl(){ return this.veritelForm.controls; }
 
+  // @ts-ignore
   onSubmit() {
   this.submitted = true;
     if (this.veritelForm.invalid){
@@ -40,21 +42,16 @@ export class VerificationTelPage implements OnInit {
         const tokenDecode = this.authSrv.decodeToken(data.token);
         this.veritelForm.reset();
         this.router.navigate(['main']);
-        Swal.fire({
-          icon: 'success',
-          title: 'sucess!!!',
-          showConfirmButton: false,
-          timer: 1500
-        });
       },
-      error => {
-        Swal.fire({
-        icon: 'error',
-        title: 'Ce numero non identifié!!! ',
-        showConfirmButton: false,
-        timer: 1500
-      });
-       }
+      error => {this.presentAlert(); }
     );
   }
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'error',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
 }
+

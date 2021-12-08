@@ -17,5 +17,20 @@
             width: 100%;
         }
     }
-    
+  .container{
+    width: 98%;
+    height: 60%;
+    border-radius: 25px !important;
+    font-weight: bold;
+    color: #eeedf4;
+  }
+  .pot500{
+    background: linear-gradient(to bottom, #e98e01 0%, #e6bf2e 100%)
+  }
+  .tof{
+    height: 100%;
+  }
+  .pot1000{
+    background: linear-gradient(to bottom, #9ba424 0%, #e6e943 100%)
+  }
 }
