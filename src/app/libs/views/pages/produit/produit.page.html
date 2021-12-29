@@ -1,69 +1,75 @@
-<ion-header>
-</ion-header>
-
-<ion-content>
-  <div class="produit-content">
-    <ion-card>
-      <ion-card-title>Contact info</ion-card-title>
-      <ion-card-subtitle>77 455 87 57 </ion-card-subtitle>
-    </ion-card>
-    <div class="produits">
-      <h5>Nos pots de fruit</h5>
-    </div>
-    <ion-grid class="container">
-    <ion-row class="pot500">
-      <ion-col size="8">
-        <ion-card>
-        <ion-card-header>
-          <ion-title>Petit format <br> 500 Fcfa</ion-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-label>Contenu:</ion-label>
-          <ul class="fa-ul">
-            <li> <i class="fa-li"></i>Melon</li>
-            <li> <i class="fa-li"></i>Poire</li>
-            <li> <i class="fa-li"></i>Raisin</li>
-            <li> <i class="fa-li"></i>Ananas</li>
-            <li><i class="fa-li"></i>Papaye</li>
-            <li> <i class="fa-li"></i>Pastéque</li>
-            <li><i class="fa-li"></i>Melon</li>
-          </ul>
-        </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <div class="img">
-          <img src="../../../../../assets/icon/500.jpeg" alt="logo" srcset=""></div>
-      </ion-col>
-    </ion-row>
-    </ion-grid>
-
-    <ion-grid class="container">
-      <ion-row class="pot1000">
-        <ion-col size="8">
-          <div>
-            <ion-title>Petit format <br> 1000 Fcfa</ion-title>
-          </div>
-          <div class="contenu">
-            <ion-label>Contenu:</ion-label>
-          </div>
-          <div>
-          <ul class="fa-ul">
-          <li><i class="fa-li"></i>Melon</li>
-          <li><i class="fa-li"></i>Poire</li>
-          <li> <i class="fa-li"></i>Raisin</li>
-          <li> <i class="fa-li"></i>Ananas</li>
-          <li><i class="fa-li"></i>Papaye</li>
-          <li> <i class="fa-li"></i>Pastéque</li>
-          <li><i class="fa-li"></i>Melon</li>
-        </ul>
-          </div>
-        </ion-col>
-        <ion-col size="4">
-          <div class="img">
-            <img src="../../../../../assets/icon/1000.jpeg" alt="logo" srcset=""></div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<div class="produit-content">
+  <ion-card>
+    <ion-card-title>Contact info</ion-card-title>
+    <ion-card-subtitle>77 455 87 57 </ion-card-subtitle>
+  </ion-card>
+  <div class="produits">
+    <h5>Nos pots de fruit</h5>
   </div>
-</ion-content>
+  <ion-content class="lesPots">
+    <form >
+    <ion-list lines="none" >
+    <ion-item (click)="openCart()" #cart>
+      <ion-card class="pot500">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="8">
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-label style=" color: #eeedf4; font-weight: bold"> <h1 style="font-size: 18px">{{dataCatalogue?.produits[0]?.nom}}<br>{{dataCatalogue?.produits[0]?.prix}}cfa</h1> </ion-label>
+                  </ion-col>
+                  <ion-col size="12" class="contenu">
+                    <h5>Contenu :</h5>
+                    <ul style="display: inline; font-size: 10px" style=" color: #eeedf4;">
+                      <li style="float: left;"><i class="fa-li"></i> Melon</li><br>
+                      <li style="float: left;"><i class="fa-li"></i>Poire</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Raisin</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Ananas</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Papaye</li><br>
+                      <li style="float: left;"><i class="fa-li"></i>Pastéque</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Banane</li>
+                    </ul>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4" style="justify-content: center">
+                <ion-img src="../../../../../assets/icon/500.jpeg" style="height: 200px;width: 70px"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-card>
+    </ion-item>
+    <ion-item (click)="openCart()">
+      <ion-card class="pot1000">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="8">
+                <ion-row>
+                  <ion-col size="12">
+                    <ion-label style=" color: #eeedf4; font-weight: bold"> <h1 style="font-size: 18px">{{dataCatalogue?.produits[1]?.nom}} <br>{{dataCatalogue?.produits[1]?.prix}}  Fcfa</h1> </ion-label>
+                  </ion-col>
+                  <ion-col size="12" class="contenu" style="color: #eeedf4;">
+                    <h5>Contenu :</h5>
+                    <ul style="display: inline; font-size: 10px" style=" color: #eeedf4;">
+                      <li style="float: left;"><i class="fa-li"></i> Melon</li><br>
+                      <li style="float: left;"><i class="fa-li"></i>Poire</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Raisin</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Ananas</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Papaye</li><br>
+                      <li style="float: left;"><i class="fa-li"></i>Pastéque</li><br>
+                      <li style="float: left;"><i class="fa-li"></i> Banane</li>
+                    </ul>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4" style="justify-content: center">
+                <ion-img src="../../../../../assets/icon/1000.jpeg" style="height: 200px;width: 70px"></ion-img>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+    </form>
+  </ion-content>
+

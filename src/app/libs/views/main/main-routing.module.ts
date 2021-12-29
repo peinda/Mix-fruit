@@ -29,6 +29,10 @@ const routes: Routes = [
         path: 'historique',
         loadChildren: () => import('../pages/historique/historique.module').then( m => m.HistoriquePageModule)
       },
+      {
+        path: 'cart-modal',
+        loadChildren: () => import('../pages/produit/cart-modal/cart-modal.module').then(m => m.CartModalPageModule)
+      }
     ]
   }
 ];
